@@ -54,7 +54,7 @@ export default function TeamSection() {
             <div className="lg:col-span-4 order-1 lg:order-2 flex flex-col items-center">
               <div className="relative rounded-2xl overflow-hidden border-4 border-[#9C1D38] shadow-md max-w-xs w-full h-[320px]">
                 <Image
-                  src="https://images.unsplash.com/photo-1580894732413-a923f71a193d?auto=format&fit=crop&q=80&w=800"
+                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=800"
                   alt="Ayesha Ali - Speech-Language Pathologist at Vice Versa"
                   fill
                   sizes="(max-width: 768px) 100vw, 320px"
@@ -87,7 +87,7 @@ export default function TeamSection() {
             <div className="lg:col-span-4 flex flex-col items-center">
               <div className="relative rounded-2xl overflow-hidden border-4 border-[#9C1D38] shadow-md max-w-xs w-full h-[320px]">
                 <Image
-                  src="https://images.unsplash.com/photo-1594824813571-24a698277d33?auto=format&fit=crop&q=80&w=800"
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800"
                   alt="Dana Beranger - Speech-Language Pathologist at Vice Versa"
                   fill
                   sizes="(max-width: 768px) 100vw, 320px"
