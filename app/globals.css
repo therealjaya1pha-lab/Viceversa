@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+@layer base {
+  :root {
+    --brand-burgundy: #9C1D38;
+    --brand-burgundy-dark: #7A1429;
+    --brand-burgundy-light: #B83A54;
+    --brand-slate: #2B2B2B;
+    --brand-purple: #C8C5F4;
+    --brand-purple-hover: #B5B1EF;
+    --brand-rose: #B85C6E;
+    --brand-gray-bg: #F4F4F6;
+    --brand-gray-card: #EAEAEE;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #2B2B2B;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  .font-script {
+    font-family: 'Caveat', cursive, sans-serif;
+  }
+}
+
+/* Custom Utilities for Vice Versa styling */
+.bg-burgundy {
+  background-color: #9C1D38;
+}
+
+.bg-burgundy-dark {
+  background-color: #7A1429;
+}
+
+.text-burgundy {
+  color: #9C1D38;
+}
+
+.border-burgundy {
+  border-color: #9C1D38;
+}
+
+.bg-purple-accent {
+  background-color: #C8C5F4;
+}
+
+.text-purple-accent {
+  color: #5A52A3;
+}
+
+.bg-slate-dark {
+  background-color: #2B2B2B;
+}
+
+/* Glassmorphism & Smooth Transitions */
+.smooth-shadow {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+}
+
+.hover-lift {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -10px rgba(156, 29, 56, 0.15);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #9C1D38;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7A1429;
+}
+

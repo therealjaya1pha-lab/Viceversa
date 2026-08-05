@@ -1,0 +1,6 @@
+{
+  "name": "Vice Versa Speech & Language Services",
+  "description": "Enterprise-grade pediatric speech, language, and feeding therapy practice web application with appointment booking, service finder, insurance verification, interactive consultation, and team portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
