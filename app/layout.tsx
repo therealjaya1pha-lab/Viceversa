@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { AppProvider } from '@/context/AppContext';
+import ErrorBoundary from '@/components/common/ErrorBoundary';
 import { Toaster } from 'sonner';
 
 export const metadata: Metadata = {
@@ -12,13 +13,16 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning className="antialiased">
+      <body suppressHydrationWarning className="antialiased font-sans">
         <AppProvider>
-          {children}
+          <ErrorBoundary>
+            {children}
+          </ErrorBoundary>
           <Toaster position="top-right" richColors />
         </AppProvider>
       </body>
     </html>
   );
 }
+
 
