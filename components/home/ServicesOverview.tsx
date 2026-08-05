@@ -61,16 +61,16 @@ export default function ServicesOverview() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-[#9C1D38] text-xs font-bold uppercase tracking-widest bg-red-50 px-3.5 py-1 rounded-full border border-red-100 inline-block">
+          <span className="badge-burgundy inline-block">
             {isEs ? 'Atención Clínica Especializada' : 'Specialized Clinical Care'}
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#2B2B2B] font-serif">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B]">
             {isEs ? 'Servicios Destacados de Terapia Infantil' : 'Comprehensive Diagnostic & Therapy Services'}
           </h2>
-          <p className="text-gray-600 text-sm sm:text-base">
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
             {isEs
               ? 'Ofrecemos programas individualizados y basados en evidencia para potenciar la comunicación de su hijo(a).'
               : 'Empowering children with tailored speech, language, feeding, and educational support.'}
@@ -83,38 +83,38 @@ export default function ServicesOverview() {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl border border-gray-100 transition-all hover-lift flex flex-col justify-between group"
+                className="surface-card surface-card-hover p-8 flex flex-col justify-between group"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="w-12 h-12 rounded-xl bg-red-50 text-[#9C1D38] flex items-center justify-center group-hover:bg-[#9C1D38] group-hover:text-white transition-colors">
+                    <div className="w-12 h-12 rounded-xl bg-[#FDF2F4] text-[#9C1D38] flex items-center justify-center group-hover:bg-[#9C1D38] group-hover:text-white transition-all shadow-xs">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-[11px] font-bold text-[#9C1D38] bg-red-50/80 px-2.5 py-0.5 rounded-full">
+                    <span className="text-[11px] font-bold text-[#9C1D38] bg-[#FDF2F4] border border-[#F4C5CE] px-2.5 py-0.5 rounded-full">
                       {s.tag}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#2B2B2B] font-serif group-hover:text-[#9C1D38] transition-colors">
+                  <h3 className="text-xl font-bold text-[#1E293B] group-hover:text-[#9C1D38] transition-colors leading-snug">
                     {s.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                  <p className="text-slate-600 text-sm leading-relaxed">
                     {s.description}
                   </p>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-gray-100 flex items-center justify-between">
+                <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
                   <button
                     onClick={() => openBookingWithService(s.title)}
-                    className="text-xs font-bold text-[#9C1D38] uppercase tracking-wider hover:underline flex items-center space-x-1"
+                    className="text-xs font-bold uppercase tracking-wider text-[#9C1D38] hover:text-[#7A1429] flex items-center space-x-1 group/btn"
                   >
                     <span>{isEs ? 'Agendar Evaluación' : 'Schedule Evaluation'}</span>
                     <CheckCircle2 className="w-3.5 h-3.5" />
                   </button>
                   <Link
                     href="/services"
-                    className="text-xs text-gray-500 hover:text-gray-900 font-medium"
+                    className="text-xs text-slate-500 hover:text-slate-900 font-medium"
                   >
                     {isEs ? 'Más info' : 'Details →'}
                   </Link>

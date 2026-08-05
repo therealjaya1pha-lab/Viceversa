@@ -47,15 +47,15 @@ export default function AppointmentModal() {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
       <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-gray-100 relative">
         {/* Header Bar */}
-        <div className="bg-[#9C1D38] text-white p-6 rounded-t-2xl flex items-center justify-between sticky top-0 z-10">
+        <div className="bg-gradient-to-r from-[#86172E] via-[#9C1D38] to-[#7A1429] text-white p-6 rounded-t-2xl flex items-center justify-between sticky top-0 z-10 shadow-md">
           <div>
             <div className="flex items-center space-x-2">
-              <Sparkles className="w-5 h-5 text-amber-300" />
-              <h2 className="text-xl font-bold font-serif">
+              <Sparkles className="w-5 h-5 text-amber-300 animate-pulse" />
+              <h2 className="text-xl font-bold font-heading">
                 {isEs ? 'Solicitar Cita de Evaluación' : 'Schedule an Appointment'}
               </h2>
             </div>
-            <p className="text-xs text-red-100 mt-1">
+            <p className="text-xs text-rose-100/90 mt-1">
               {isEs
                 ? 'Hablamos español, consulte con nosotros para solicitar una cita.'
                 : 'Pediatric Speech, Language & Feeding Therapy in Irving, TX'}
@@ -63,7 +63,7 @@ export default function AppointmentModal() {
           </div>
           <button
             onClick={resetAndClose}
-            className="p-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+            className="p-1.5 rounded-full bg-white/10 hover:bg-white/25 text-white transition-all"
           >
             <X className="w-5 h-5" />
           </button>

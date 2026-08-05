@@ -57,36 +57,36 @@ export default function ParentAssistant() {
       {!isOpen ? (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-[#9C1D38] hover:bg-[#7A1429] text-white p-4 rounded-full shadow-2xl flex items-center space-x-2 transition-transform hover:scale-105 group border-2 border-white"
+          className="bg-gradient-to-r from-[#86172E] via-[#9C1D38] to-[#7A1429] hover:from-[#7A1429] hover:to-[#5F0F1F] text-white p-4 rounded-full shadow-2xl flex items-center space-x-2.5 transition-all hover:scale-105 group border-2 border-white/90 active:scale-95"
           aria-label="Open AI Speech Assistant"
         >
           <div className="relative">
-            <MessageSquare className="w-6 h-6" />
-            <span className="absolute -top-1 -right-1 w-3 h-3 bg-amber-400 rounded-full animate-ping" />
+            <MessageSquare className="w-5 h-5 text-white" />
+            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-amber-400 rounded-full animate-ping" />
           </div>
           <span className="hidden sm:inline text-xs font-bold uppercase tracking-wider pr-1">
             {isEs ? 'Asistente Vice Versa' : 'Ask Vice Versa AI'}
           </span>
         </button>
       ) : (
-        <div className="bg-white rounded-2xl w-[90vw] sm:w-[380px] h-[480px] shadow-2xl border border-gray-200 flex flex-col overflow-hidden animate-in slide-in-from-bottom-5">
+        <div className="bg-white rounded-2xl w-[90vw] sm:w-[380px] h-[480px] shadow-2xl border border-slate-200/80 flex flex-col overflow-hidden animate-in slide-in-from-bottom-5">
           {/* Header */}
-          <div className="bg-[#9C1D38] text-white p-4 flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                <Bot className="w-5 h-5 text-white" />
+          <div className="bg-gradient-to-r from-[#86172E] via-[#9C1D38] to-[#7A1429] text-white p-4 flex items-center justify-between shadow-xs">
+            <div className="flex items-center space-x-2.5">
+              <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-xs flex items-center justify-center border border-white/20">
+                <Bot className="w-4 h-4 text-white" />
               </div>
               <div>
-                <h4 className="font-bold text-sm font-serif">Vice Versa Parent Assistant</h4>
-                <p className="text-[10px] text-red-100 flex items-center space-x-1">
-                  <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full inline-block" />
+                <h4 className="font-bold text-sm">Vice Versa Parent Assistant</h4>
+                <p className="text-[10px] text-rose-100/90 flex items-center space-x-1 font-medium">
+                  <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full inline-block animate-pulse" />
                   <span>{isEs ? 'En línea • Terapia Infantil' : 'Online • Speech & Feeding Support'}</span>
                 </p>
               </div>
             </div>
             <button
               onClick={() => setIsOpen(false)}
-              className="p-1 rounded-full hover:bg-white/20 transition-colors"
+              className="p-1 rounded-full hover:bg-white/20 text-white transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
@@ -121,36 +121,36 @@ export default function ParentAssistant() {
           </div>
 
           {/* Quick CTAs */}
-          <div className="px-3 py-1.5 bg-gray-100 flex items-center justify-between text-[11px]">
+          <div className="px-3.5 py-2 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-[11px]">
             <button
               onClick={() => openBookingWithService()}
-              className="text-[#9C1D38] font-bold flex items-center space-x-1 hover:underline"
+              className="text-[#9C1D38] font-bold flex items-center space-x-1.5 hover:text-[#7A1429] transition-colors"
             >
-              <Calendar className="w-3 h-3" />
+              <Calendar className="w-3.5 h-3.5 text-[#9C1D38]" />
               <span>{isEs ? 'Solicitar Cita' : 'Book Evaluation'}</span>
             </button>
             <a
               href="tel:4693201700"
-              className="text-gray-700 font-semibold flex items-center space-x-1 hover:underline"
+              className="text-slate-600 font-semibold flex items-center space-x-1.5 hover:text-slate-900 transition-colors"
             >
-              <Phone className="w-3 h-3 text-[#9C1D38]" />
+              <Phone className="w-3.5 h-3.5 text-[#9C1D38]" />
               <span>469-320-1700</span>
             </a>
           </div>
 
           {/* Input Form */}
-          <form onSubmit={handleSend} className="p-2.5 bg-white border-t border-gray-200 flex gap-2">
+          <form onSubmit={handleSend} className="p-3 bg-white border-t border-slate-100 flex gap-2">
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder={isEs ? 'Escriba su pregunta aquí...' : 'Ask about speech, feeding, insurance...'}
-              className="flex-1 px-3 py-2 rounded-xl border border-gray-300 text-xs focus:outline-none focus:ring-1 focus:ring-[#9C1D38]"
+              className="flex-1 px-3.5 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-2 focus:ring-[#9C1D38] focus:border-transparent"
             />
             <button
               type="submit"
               disabled={loading || !input.trim()}
-              className="bg-[#9C1D38] text-white p-2 rounded-xl hover:bg-[#7A1429] disabled:opacity-50 transition-colors"
+              className="bg-[#9C1D38] text-white p-2.5 rounded-xl hover:bg-[#7A1429] disabled:opacity-50 transition-all active:scale-95 shadow-xs"
             >
               <Send className="w-4 h-4" />
             </button>

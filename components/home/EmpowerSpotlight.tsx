@@ -10,7 +10,7 @@ export default function EmpowerSpotlight() {
   const isEs = language === 'es';
 
   return (
-    <section className="py-20 bg-[#EAEAEE] overflow-hidden">
+    <section className="py-20 bg-[#F8FAFC] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Side Image */}
@@ -29,12 +29,18 @@ export default function EmpowerSpotlight() {
 
           {/* Right Side White Box Card */}
           <div className="lg:col-span-6">
-            <div className="bg-white p-8 sm:p-10 md:p-12 rounded-2xl shadow-xl border border-gray-100 space-y-6">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2B2B2B] font-serif tracking-tight">
+            <div className="surface-card p-8 sm:p-10 md:p-12 space-y-6 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#9C1D38]/10 to-transparent rounded-bl-full pointer-events-none" />
+              
+              <div className="inline-block badge-purple">
+                {isEs ? 'Programa Educativo Especializado' : 'Specialized Education Program'}
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1E293B] tracking-tight">
                 Empower!
               </h2>
 
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                 {isEs
                   ? '¡Descubra cómo nuestros programas Empower pueden transformar el futuro de su estudiante! En Vice Versa Speech and Language Services, nuestros programas EmpowerEd y Empower U están diseñados para equipar a su estudiante con las habilidades esenciales necesarias para el éxito académico y la independencia diaria. Ya sea que su estudiante necesite apoyo en su viaje educativo o desee generar confianza en las tareas de la vida diaria, nuestros programas están aquí para guiarlo en cada paso del camino.'
                   : 'Discover how our Empower programs can transform your learner’s future! At Vice Versa Speech and Language Services, our EmpowerEd and Empower U programs are designed to equip your learner with the essential skills needed for academic success and everyday independence. Whether your learner needs support in their educational journey or wants to build confidence in daily life tasks, our programs are here to guide them every step of the way. Don’t miss out on this incredible opportunity to empower your learner to thrive—click the button below to learn more and see how EmpowerEd and Empower U can make a difference in their lives!'}
@@ -43,7 +49,7 @@ export default function EmpowerSpotlight() {
               <div>
                 <Link
                   href="/empower"
-                  className="inline-block bg-[#B85C6E] hover:bg-[#A34A5C] text-white px-8 py-3 rounded-md text-xs font-bold uppercase tracking-wider transition-all shadow-sm hover:shadow-md"
+                  className="inline-block bg-[#9C1D38] hover:bg-[#7A1429] text-white px-8 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-md hover:shadow-lg active:scale-95"
                 >
                   {isEs ? 'Comenzar' : 'Get Started'}
                 </Link>

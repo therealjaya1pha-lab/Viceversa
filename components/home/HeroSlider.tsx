@@ -47,7 +47,7 @@ export default function HeroSlider() {
   }, [slides.length]);
 
   return (
-    <section className="relative w-full h-[520px] md:h-[620px] bg-[#1A1A1A] overflow-hidden">
+    <section className="relative w-full h-[520px] md:h-[620px] bg-[#1E293B] overflow-hidden">
       {/* Background Images */}
       {slides.map((slide, index) => (
         <div
@@ -58,7 +58,7 @@ export default function HeroSlider() {
           style={{ transitionProperty: 'opacity, transform' }}
         >
           {/* Overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-950/40 to-transparent z-10" />
           <Image
             src={slide.image}
             alt={slide.title}
@@ -70,32 +70,32 @@ export default function HeroSlider() {
         </div>
       ))}
 
-      {/* Floating Hero Content Box (Mirrors screenshot design) */}
+      {/* Floating Hero Content Box */}
       <div className="absolute inset-0 z-20 flex items-center justify-center p-4">
-        <div className="bg-white/90 backdrop-blur-md p-6 sm:p-10 md:p-12 rounded-2xl shadow-2xl max-w-2xl w-full text-center border border-white/60 transform transition-all animate-in fade-in zoom-in-95">
-          <div className="inline-flex items-center space-x-1.5 bg-[#9C1D38]/10 text-[#9C1D38] px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+        <div className="bg-white/95 backdrop-blur-md p-6 sm:p-10 md:p-12 rounded-2xl shadow-2xl max-w-2xl w-full text-center border border-white/80 transform transition-all animate-in fade-in zoom-in-95">
+          <div className="inline-flex items-center space-x-1.5 bg-[#FDF2F4] text-[#9C1D38] border border-[#F4C5CE] px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-[#9C1D38]" />
             <span>{slides[current].tag}</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2B2B2B] tracking-tight font-serif leading-tight mb-3">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1E293B] tracking-tight leading-tight mb-3">
             {slides[current].title}
           </h1>
 
-          <p className="text-sm sm:text-base text-gray-700 font-medium mb-8 max-w-lg mx-auto">
+          <p className="text-sm sm:text-base text-slate-600 font-medium mb-8 max-w-lg mx-auto leading-relaxed">
             {slides[current].subtitle}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/services"
-              className="w-full sm:w-auto bg-white border-2 border-[#9C1D38] text-[#9C1D38] hover:bg-red-50 px-7 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm hover:shadow"
+              className="w-full sm:w-auto bg-white border-2 border-[#9C1D38] text-[#9C1D38] hover:bg-[#FDF2F4] px-7 py-3 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-xs hover:shadow-sm active:scale-95"
             >
               {isEs ? 'NUESTROS SERVICIOS' : 'OUR SERVICES'}
             </Link>
             <button
               onClick={() => openBookingWithService()}
-              className="w-full sm:w-auto bg-[#9C1D38] hover:bg-[#7A1429] text-white px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-md hover:shadow-lg"
+              className="w-full sm:w-auto bg-[#9C1D38] hover:bg-[#7A1429] text-white px-7 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-md hover:shadow-lg active:scale-95"
             >
               {isEs ? 'CONTÁCTENOS' : 'CONTACT US'}
             </button>

@@ -26,21 +26,21 @@ export default function Header() {
   return (
     <header className="w-full sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
       {/* Top Red Contact Bar */}
-      <div className="bg-[#9C1D38] text-white py-1.5 px-4 text-xs md:text-sm font-medium">
+      <div className="bg-gradient-to-r from-[#86172E] via-[#9C1D38] to-[#7A1429] text-white py-1.5 px-4 text-xs md:text-sm font-medium shadow-inner">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center space-x-6">
             <a
               href="mailto:info@viceversaspeech.com"
-              className="flex items-center space-x-1.5 hover:text-red-200 transition-colors"
+              className="flex items-center space-x-1.5 hover:text-burgundy-soft transition-colors"
             >
-              <Mail className="w-3.5 h-3.5" />
+              <Mail className="w-3.5 h-3.5 text-rose-200" />
               <span>info@viceversaspeech.com</span>
             </a>
             <a
               href="tel:4693201700"
-              className="flex items-center space-x-1.5 hover:text-red-200 transition-colors"
+              className="flex items-center space-x-1.5 hover:text-burgundy-soft transition-colors"
             >
-              <Phone className="w-3.5 h-3.5" />
+              <Phone className="w-3.5 h-3.5 text-rose-200" />
               <span>469-320-1700</span>
             </a>
           </div>
@@ -48,25 +48,25 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <button
               onClick={() => setIsScreenerOpen(true)}
-              className="hidden lg:flex items-center space-x-1 bg-white/15 hover:bg-white/25 text-white px-2.5 py-0.5 rounded-full text-xs transition-colors"
+              className="hidden lg:flex items-center space-x-1.5 bg-white/15 hover:bg-white/25 text-white px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm transition-all shadow-xs"
             >
-              <Sparkles className="w-3 h-3 text-amber-300" />
+              <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
               <span>{isEs ? 'Evaluación Rápida' : 'Therapy Screener'}</span>
             </button>
 
-            <div className="flex items-center space-x-1 bg-black/20 p-0.5 rounded-full text-xs">
+            <div className="flex items-center space-x-1 bg-black/25 p-0.5 rounded-full text-xs border border-white/10">
               <button
                 onClick={() => setLanguage('en')}
-                className={`px-2 py-0.5 rounded-full transition-colors ${
-                  language === 'en' ? 'bg-white text-[#9C1D38] font-bold' : 'text-white hover:text-red-100'
+                className={`px-2.5 py-0.5 rounded-full transition-all font-semibold ${
+                  language === 'en' ? 'bg-white text-[#9C1D38] shadow-xs' : 'text-white/90 hover:text-white'
                 }`}
               >
                 EN
               </button>
               <button
                 onClick={() => setLanguage('es')}
-                className={`px-2 py-0.5 rounded-full transition-colors ${
-                  language === 'es' ? 'bg-white text-[#9C1D38] font-bold' : 'text-white hover:text-red-100'
+                className={`px-2.5 py-0.5 rounded-full transition-all font-semibold ${
+                  language === 'es' ? 'bg-white text-[#9C1D38] shadow-xs' : 'text-white/90 hover:text-white'
                 }`}
               >
                 ES (Español)
@@ -128,13 +128,13 @@ export default function Header() {
         <div className="hidden sm:flex items-center space-x-3">
           <button
             onClick={() => openBookingWithService()}
-            className="bg-[#2B2B2B] hover:bg-black text-white px-5 py-2 rounded-md text-xs font-bold uppercase tracking-wider transition-all hover:shadow-md"
+            className="bg-[#1E293B] hover:bg-[#0F172A] text-white px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all hover:shadow-md active:scale-95"
           >
             {isEs ? 'CONTACTO' : 'CONTACT'}
           </button>
           <Link
             href="/nannies"
-            className="bg-[#C8C5F4] hover:bg-[#B5B1EF] text-[#2B2B2B] px-5 py-2 rounded-md text-xs font-bold uppercase tracking-wider transition-all hover:shadow-md border border-[#B5B1EF]"
+            className="bg-[#C8C5F4] hover:bg-[#B5B1EF] text-[#4C468E] px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all hover:shadow-md border border-[#B5B1EF] active:scale-95"
           >
             LOLN
           </Link>
