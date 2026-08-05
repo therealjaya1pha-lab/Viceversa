@@ -10,18 +10,18 @@ export default function IntroSection() {
   const isEs = language === 'es';
 
   return (
-    <section className="py-16 md:py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="section-spacing-md bg-white overflow-hidden">
+      <div className="layout-container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Text Column */}
           <div className="lg:col-span-7 space-y-6">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#9C1D38] leading-tight">
+            <h2 className="text-fluid-h2 font-extrabold text-[#9C1D38]">
               {isEs
                 ? 'Vice Versa es una práctica privada dedicada a brindar terapia de habla, lenguaje y alimentación de la más alta calidad, junto con servicios diagnósticos integrales.'
                 : 'Vice Versa is a private practice dedicated to delivering the highest quality speech, language, and feeding therapy, along with comprehensive diagnostic services.'}
             </h2>
 
-            <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+            <div className="space-y-4 text-fluid-body text-slate-700">
               <p>
                 {isEs
                   ? 'Nos enorgullecemos de fomentar un ambiente familiar para dar la bienvenida a nuestros jóvenes clientes y pasar tiempo trabajando en estrecha colaboración con los padres para ayudar a promover la comunicación de su hijo pequeño en el hogar y en la comunidad.'

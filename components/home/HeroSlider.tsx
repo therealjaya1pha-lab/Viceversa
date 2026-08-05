@@ -78,11 +78,11 @@ export default function HeroSlider() {
             <span>{slides[current].tag}</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1E293B] tracking-tight leading-tight mb-3">
+          <h1 className="text-fluid-h1 font-extrabold text-[#1E293B] tracking-tight mb-3">
             {slides[current].title}
           </h1>
 
-          <p className="text-sm sm:text-base text-slate-600 font-medium mb-8 max-w-lg mx-auto leading-relaxed">
+          <p className="text-fluid-sub text-slate-600 font-medium mb-8 max-w-lg mx-auto">
             {slides[current].subtitle}
           </p>
 
