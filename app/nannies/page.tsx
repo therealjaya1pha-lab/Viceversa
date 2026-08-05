@@ -21,14 +21,14 @@ export default function NanniesPage() {
       <main className="flex-1">
         {/* Banner with LOLN Purple Accent */}
         <div className="bg-[#C8C5F4] text-[#2B2B2B] py-14 px-4 border-b border-[#B5B1EF]">
-          <div className="max-w-7xl mx-auto text-center space-y-3">
-            <span className="text-xs font-bold uppercase tracking-widest bg-white/70 px-3.5 py-1 rounded-full text-[#5A52A3] border border-[#5A52A3]/20">
+          <div className="layout-container text-center space-y-3">
+            <span className="text-fluid-caption font-bold uppercase tracking-widest bg-white/70 px-3.5 py-1 rounded-full text-[#5A52A3] border border-[#5A52A3]/20">
               LOLN • Language of Learning Nannies
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-serif">
+            <h1 className="text-fluid-h1 font-extrabold font-serif-brand">
               {isEs ? 'Capacitación y Coaching de Niñeras (LOLN)' : 'Language of Learning Nannies (LOLN)'}
             </h1>
-            <p className="text-sm sm:text-base text-gray-800 max-w-2xl mx-auto">
+            <p className="text-fluid-sub text-gray-800 max-w-2xl mx-auto">
               {isEs
                 ? 'Capacitando a niñeras y cuidadoras con técnicas de facilitación del habla, lenguaje y desarrollo temprano en el hogar.'
                 : 'Empowering nannies & caregivers with specialized speech enrichment, feeding support, and early language techniques.'}
@@ -37,7 +37,7 @@ export default function NanniesPage() {
         </div>
 
         {/* Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+        <div className="layout-container section-spacing-md space-y-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
               <span className="text-xs font-bold uppercase tracking-wider text-[#9C1D38] bg-red-50 px-3 py-1 rounded-full">

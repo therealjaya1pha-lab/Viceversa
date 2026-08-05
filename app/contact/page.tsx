@@ -20,14 +20,14 @@ export default function ContactPage() {
       <main className="flex-1">
         {/* Banner */}
         <div className="bg-[#9C1D38] text-white py-14 px-4">
-          <div className="max-w-7xl mx-auto text-center space-y-3">
-            <span className="text-xs font-bold uppercase tracking-widest bg-white/15 px-3.5 py-1 rounded-full text-red-100">
+          <div className="layout-container text-center space-y-3">
+            <span className="text-fluid-caption font-bold uppercase tracking-widest bg-white/15 px-3.5 py-1 rounded-full text-red-100">
               {isEs ? 'Contacto e Instalaciones' : 'Contact & Location'}
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-serif">
+            <h1 className="text-fluid-h1 font-extrabold font-serif-brand">
               {isEs ? 'Comuníquese con Vice Versa' : 'Get in Touch with Vice Versa'}
             </h1>
-            <p className="text-sm sm:text-base text-red-100 max-w-2xl mx-auto">
+            <p className="text-fluid-sub text-red-100 max-w-2xl mx-auto">
               {isEs
                 ? 'Estamos aquí para guiarle. Llámenos, envíenos un correo o programe su cita en línea.'
                 : 'We look forward to serving your family at our Irving, Texas pediatric clinic.'}
@@ -36,7 +36,7 @@ export default function ContactPage() {
         </div>
 
         {/* Contact Info & Interactive Multi-Step Form */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+        <div className="layout-container section-spacing-md space-y-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Contact Details Card */}
             <div className="lg:col-span-5 space-y-8">

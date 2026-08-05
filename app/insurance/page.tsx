@@ -53,14 +53,14 @@ export default function InsurancePage() {
       <main className="flex-1">
         {/* Insurance Page Banner */}
         <div className="bg-[#9C1D38] text-white py-14 px-4">
-          <div className="max-w-7xl mx-auto text-center space-y-3">
-            <span className="text-xs font-bold uppercase tracking-widest bg-white/15 px-3.5 py-1 rounded-full text-red-100">
+          <div className="layout-container text-center space-y-3">
+            <span className="text-fluid-caption font-bold uppercase tracking-widest bg-white/15 px-3.5 py-1 rounded-full text-red-100">
               {isEs ? 'Cobertura y Seguros Medicos' : 'Insurance & Billing'}
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-serif">
+            <h1 className="text-fluid-h1 font-extrabold font-serif-brand">
               {isEs ? 'Seguros Aceptados y Verificación de Beneficios' : 'Accepted Insurance & Coverage Assistance'}
             </h1>
-            <p className="text-sm sm:text-base text-red-100 max-w-2xl mx-auto">
+            <p className="text-fluid-sub text-red-100 max-w-2xl mx-auto">
               {isEs
                 ? 'Trabajamos directamente con su proveedor de seguro médico para maximizar sus beneficios y simplificar la atención de su hijo(a).'
                 : 'We work directly with major health insurance carriers and Texas Medicaid to make quality therapy accessible.'}
@@ -69,7 +69,7 @@ export default function InsurancePage() {
         </div>
 
         {/* Accepted Providers Grid */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+        <div className="layout-container section-spacing-md space-y-16">
           <div className="space-y-8">
             <div className="text-center max-w-2xl mx-auto space-y-2">
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#2B2B2B] font-serif">

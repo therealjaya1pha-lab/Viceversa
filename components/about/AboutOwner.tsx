@@ -13,7 +13,7 @@ export default function AboutOwner() {
     <div className="space-y-12">
       {/* Red Quote Banner Matching Image 2 */}
       <div className="bg-[#9C1D38] text-white py-12 px-6 rounded-2xl text-center shadow-lg">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-script tracking-wide text-white leading-tight">
+        <h1 className="text-fluid-h1 font-script tracking-wide text-white leading-tight">
           &quot;{isEs ? 'EN VICE VERSA BRINDAMOS ATENCIÓN COMPASIVA.' : 'AT VICE VERSA WE PROVIDE COMPASSIONATE CARE.'}&quot;
         </h1>
       </div>
@@ -21,7 +21,7 @@ export default function AboutOwner() {
       {/* About The Owner Section */}
       <div className="space-y-8">
         <div className="text-center">
-          <h2 className="text-4xl sm:text-5xl font-script text-[#9C1D38] font-bold tracking-wide">
+          <h2 className="text-fluid-h2 font-script text-[#9C1D38] font-bold tracking-wide">
             {isEs ? 'Sobre la Propietaria' : 'ABOUT THE OWNER'}
           </h2>
         </div>
@@ -41,18 +41,18 @@ export default function AboutOwner() {
                 />
               </div>
               <div className="text-center mt-3">
-                <h3 className="text-xl font-bold text-[#2B2B2B]">Deborah Modé</h3>
-                <p className="text-xs font-bold text-[#9C1D38] tracking-widest uppercase mt-0.5">
+                <h3 className="text-fluid-h4 font-bold text-[#2B2B2B]">Deborah Modé</h3>
+                <p className="text-fluid-caption font-bold text-[#9C1D38] tracking-widest uppercase mt-0.5">
                   OWNER & FOUNDER, VICE VERSA SPEECH
                 </p>
                 <div className="flex flex-wrap items-center justify-center gap-1.5 mt-2">
-                  <span className="text-[10px] bg-red-50 text-[#9C1D38] px-2 py-0.5 rounded font-bold">
+                  <span className="text-fluid-caption bg-red-50 text-[#9C1D38] px-2 py-0.5 rounded font-bold">
                     MS, CCC-SLP
                   </span>
-                  <span className="text-[10px] bg-gray-100 text-gray-700 px-2 py-0.5 rounded font-bold">
+                  <span className="text-fluid-caption bg-gray-100 text-gray-700 px-2 py-0.5 rounded font-bold">
                     Licensed TX, CA, MA
                   </span>
-                  <span className="text-[10px] bg-amber-50 text-amber-800 px-2 py-0.5 rounded font-bold">
+                  <span className="text-fluid-caption bg-amber-50 text-amber-800 px-2 py-0.5 rounded font-bold">
                     BCBA Candidate (UNT)
                   </span>
                 </div>
@@ -60,7 +60,7 @@ export default function AboutOwner() {
             </div>
 
             {/* Owner Bios Paragraphs */}
-            <div className="lg:col-span-8 space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+            <div className="lg:col-span-8 space-y-4 text-fluid-body text-gray-700">
               <p>
                 {isEs
                   ? 'Deborah Modé es la propietaria y fundadora de Vice Versa Speech and Language Services, quien brinda terapia del habla para niños desde 2005. Ofrece el más alto nivel de dedicación y calidad de servicio a los clientes. Su misión es servir a sus clientes y brindar apoyo a sus familias para trabajar en equipo y lograr sus objetivos.'

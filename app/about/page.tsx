@@ -31,11 +31,11 @@ export default function AboutPage() {
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 w-full">
-              <span className="text-red-300 text-xs font-bold uppercase tracking-widest bg-red-950/60 px-3 py-1 rounded-full border border-red-800">
+            <div className="layout-container pb-8">
+              <span className="text-red-300 text-fluid-caption font-bold uppercase tracking-widest bg-red-950/60 px-3 py-1 rounded-full border border-red-800">
                 {isEs ? 'Sobre Vice Versa' : 'About Vice Versa'}
               </span>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white font-serif mt-2">
+              <h1 className="text-fluid-h1 font-extrabold text-white font-serif-brand mt-2">
                 {isEs ? 'Nuestra Historia y Equipo Clínico' : 'Our Story & Clinical Team'}
               </h1>
             </div>
@@ -43,7 +43,7 @@ export default function AboutPage() {
         </div>
 
         {/* Main About Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+        <div className="layout-container section-spacing-md space-y-16">
           <AboutOwner />
           <TeamSection />
         </div>

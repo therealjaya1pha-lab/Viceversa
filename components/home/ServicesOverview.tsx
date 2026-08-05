@@ -61,16 +61,16 @@ export default function ServicesOverview() {
   ];
 
   return (
-    <section className="py-20 bg-[#F8FAFC]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="section-spacing-md bg-[#F8FAFC]">
+      <div className="layout-container">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="badge-burgundy inline-block">
+          <span className="badge-burgundy inline-block text-fluid-sm font-semibold">
             {isEs ? 'Atención Clínica Especializada' : 'Specialized Clinical Care'}
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B]">
+          <h2 className="text-fluid-h2 font-extrabold text-[#1E293B]">
             {isEs ? 'Servicios Destacados de Terapia Infantil' : 'Comprehensive Diagnostic & Therapy Services'}
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-fluid-sub text-slate-600">
             {isEs
               ? 'Ofrecemos programas individualizados y basados en evidencia para potenciar la comunicación de su hijo(a).'
               : 'Empowering children with tailored speech, language, feeding, and educational support.'}
@@ -90,16 +90,16 @@ export default function ServicesOverview() {
                     <div className="w-12 h-12 rounded-xl bg-[#FDF2F4] text-[#9C1D38] flex items-center justify-center group-hover:bg-[#9C1D38] group-hover:text-white transition-all shadow-xs">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-[11px] font-bold text-[#9C1D38] bg-[#FDF2F4] border border-[#F4C5CE] px-2.5 py-0.5 rounded-full">
+                    <span className="text-fluid-sm font-bold text-[#9C1D38] bg-[#FDF2F4] border border-[#F4C5CE] px-2.5 py-0.5 rounded-full">
                       {s.tag}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#1E293B] group-hover:text-[#9C1D38] transition-colors leading-snug">
+                  <h3 className="text-fluid-h4 font-bold text-[#1E293B] group-hover:text-[#9C1D38] transition-colors leading-snug">
                     {s.title}
                   </h3>
 
-                  <p className="text-slate-600 text-sm leading-relaxed">
+                  <p className="text-fluid-body text-slate-600">
                     {s.description}
                   </p>
                 </div>
@@ -107,14 +107,14 @@ export default function ServicesOverview() {
                 <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
                   <button
                     onClick={() => openBookingWithService(s.title)}
-                    className="text-xs font-bold uppercase tracking-wider text-[#9C1D38] hover:text-[#7A1429] flex items-center space-x-1 group/btn"
+                    className="text-fluid-button font-bold text-[#9C1D38] hover:text-[#7A1429] flex items-center space-x-1 group/btn"
                   >
                     <span>{isEs ? 'Agendar Evaluación' : 'Schedule Evaluation'}</span>
                     <CheckCircle2 className="w-3.5 h-3.5" />
                   </button>
                   <Link
                     href="/services"
-                    className="text-xs text-slate-500 hover:text-slate-900 font-medium"
+                    className="text-fluid-sm text-slate-500 hover:text-slate-900 font-medium"
                   >
                     {isEs ? 'Más info' : 'Details →'}
                   </Link>

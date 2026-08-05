@@ -49,14 +49,14 @@ export default function EmploymentPage() {
       <main className="flex-1">
         {/* Banner */}
         <div className="bg-[#9C1D38] text-white py-14 px-4">
-          <div className="max-w-7xl mx-auto text-center space-y-3">
-            <span className="text-xs font-bold uppercase tracking-widest bg-white/15 px-3.5 py-1 rounded-full text-red-100">
+          <div className="layout-container text-center space-y-3">
+            <span className="text-fluid-caption font-bold uppercase tracking-widest bg-white/15 px-3.5 py-1 rounded-full text-red-100">
               {isEs ? 'Únase a Nuestro Equipo' : 'Careers at Vice Versa'}
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-serif">
+            <h1 className="text-fluid-h1 font-extrabold font-serif-brand">
               {isEs ? 'Oportunidades de Empleo en Terapia Infantil' : 'Join Our Clinical & Administrative Team'}
             </h1>
-            <p className="text-sm sm:text-base text-red-100 max-w-2xl mx-auto">
+            <p className="text-fluid-sub text-red-100 max-w-2xl mx-auto">
               {isEs
                 ? 'Buscamos patólogos del habla, asistentes y personal dedicado a brindar una atención compasiva y de alta calidad.'
                 : 'We are expanding our Irving, TX private practice. Work alongside experienced pediatric clinicians.'}
@@ -65,7 +65,7 @@ export default function EmploymentPage() {
         </div>
 
         {/* Positions Grid & Application Form */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+        <div className="layout-container section-spacing-md space-y-16">
           <div className="space-y-6">
             <h2 className="text-2xl font-bold text-[#2B2B2B] font-serif text-center">
               {isEs ? 'Vacantes Actuales' : 'Open Positions'}

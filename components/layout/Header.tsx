@@ -26,8 +26,8 @@ export default function Header() {
   return (
     <header className="w-full sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
       {/* Top Red Contact Bar */}
-      <div className="bg-gradient-to-r from-[#86172E] via-[#9C1D38] to-[#7A1429] text-white py-1.5 px-4 text-xs md:text-sm font-medium shadow-inner">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div className="bg-gradient-to-r from-[#86172E] via-[#9C1D38] to-[#7A1429] text-white py-1.5 px-4 text-fluid-caption font-medium shadow-inner">
+        <div className="layout-container flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center space-x-6">
             <a
               href="mailto:info@viceversaspeech.com"
@@ -48,13 +48,13 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <button
               onClick={() => setIsScreenerOpen(true)}
-              className="hidden lg:flex items-center space-x-1.5 bg-white/15 hover:bg-white/25 text-white px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm transition-all shadow-xs"
+              className="hidden lg:flex items-center space-x-1.5 bg-white/15 hover:bg-white/25 text-white px-3 py-1 rounded-full text-fluid-caption font-semibold backdrop-blur-sm transition-all shadow-xs"
             >
               <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
               <span>{isEs ? 'Evaluación Rápida' : 'Therapy Screener'}</span>
             </button>
 
-            <div className="flex items-center space-x-1 bg-black/25 p-0.5 rounded-full text-xs border border-white/10">
+            <div className="flex items-center space-x-1 bg-black/25 p-0.5 rounded-full text-fluid-caption border border-white/10">
               <button
                 onClick={() => setLanguage('en')}
                 className={`px-2.5 py-0.5 rounded-full transition-all font-semibold ${
@@ -77,7 +77,7 @@ export default function Header() {
       </div>
 
       {/* Main Logo & Nav Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+      <div className="layout-container py-3.5 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-3 group">
           <div className="relative w-10 h-10 flex items-center justify-center">
@@ -95,10 +95,10 @@ export default function Header() {
             </svg>
           </div>
           <div>
-            <div className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#2B2B2B] leading-none font-serif">
+            <div className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#2B2B2B] leading-none font-serif-brand">
               Vice Versa
             </div>
-            <div className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#9C1D38] mt-0.5">
+            <div className="text-fluid-caption font-semibold uppercase tracking-wider text-[#9C1D38] mt-0.5">
               Speech and Language Services
             </div>
           </div>
@@ -112,7 +112,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-semibold tracking-wide transition-colors relative py-1 ${
+                className={`text-fluid-sm font-semibold tracking-wide transition-colors relative py-1 ${
                   isActive
                     ? 'text-[#9C1D38] font-bold border-b-2 border-[#9C1D38]'
                     : 'text-gray-700 hover:text-[#9C1D38]'
@@ -128,13 +128,13 @@ export default function Header() {
         <div className="hidden sm:flex items-center space-x-3">
           <button
             onClick={() => openBookingWithService()}
-            className="bg-[#1E293B] hover:bg-[#0F172A] text-white px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all hover:shadow-md active:scale-95"
+            className="bg-[#1E293B] hover:bg-[#0F172A] text-white px-5 py-2 rounded-lg text-fluid-button font-bold tracking-wider transition-all hover:shadow-md active:scale-95"
           >
             {isEs ? 'CONTACTO' : 'CONTACT'}
           </button>
           <Link
             href="/nannies"
-            className="bg-[#C8C5F4] hover:bg-[#B5B1EF] text-[#4C468E] px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all hover:shadow-md border border-[#B5B1EF] active:scale-95"
+            className="bg-[#C8C5F4] hover:bg-[#B5B1EF] text-[#4C468E] px-5 py-2 rounded-lg text-fluid-button font-bold tracking-wider transition-all hover:shadow-md border border-[#B5B1EF] active:scale-95"
           >
             LOLN
           </Link>

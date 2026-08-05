@@ -126,14 +126,14 @@ export default function ServicesPage() {
       <main className="flex-1">
         {/* Banner */}
         <div className="bg-[#9C1D38] text-white py-14 px-4">
-          <div className="max-w-7xl mx-auto text-center space-y-3">
-            <span className="text-xs font-bold uppercase tracking-widest bg-white/15 px-3.5 py-1 rounded-full text-red-100">
+          <div className="layout-container text-center space-y-3">
+            <span className="text-fluid-caption font-bold uppercase tracking-widest bg-white/15 px-3.5 py-1 rounded-full text-red-100">
               {isEs ? 'Catálogo de Servicios Clínicos' : 'Pediatric Clinical Services'}
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-serif">
+            <h1 className="text-fluid-h1 font-extrabold font-serif-brand">
               {isEs ? 'Servicios de Habla, Lenguaje y Alimentación' : 'Speech, Language & Feeding Therapies'}
             </h1>
-            <p className="text-sm sm:text-base text-red-100 max-w-2xl mx-auto">
+            <p className="text-fluid-sub text-red-100 max-w-2xl mx-auto">
               {isEs
                 ? 'Ofrecemos evaluaciones diagnósticas y planes de tratamiento individualizados para cada etapa del desarrollo infantil.'
                 : 'Empowering children in Irving, TX with evidence-based, highly individualized clinical therapies.'}
@@ -142,7 +142,7 @@ export default function ServicesPage() {
         </div>
 
         {/* Services Main Container */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+        <div className="layout-container section-spacing-md space-y-12">
           {/* Category Filter Tabs */}
           <div className="flex flex-wrap items-center justify-center gap-2 border-b border-gray-200 pb-4">
             <button

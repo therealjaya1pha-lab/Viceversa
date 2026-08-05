@@ -12,10 +12,10 @@ export default function TeamSection() {
   return (
     <div className="space-y-12">
       <div className="text-center pt-8">
-        <h2 className="text-4xl sm:text-5xl font-script text-[#9C1D38] font-bold tracking-wide">
+        <h2 className="text-fluid-h2 font-script text-[#9C1D38] font-bold tracking-wide">
           {isEs ? 'Conozca a Nuestro Equipo' : 'MEET THE TEAM'}
         </h2>
-        <p className="text-gray-600 text-sm mt-2 max-w-xl mx-auto">
+        <p className="text-gray-600 text-fluid-sub mt-2 max-w-xl mx-auto">
           {isEs
             ? 'Nuestro equipo interdisciplinario apasionado de especialistas dedicados al desarrollo infantil.'
             : 'Our compassionate, experienced team of speech-language pathologists and administration.'}

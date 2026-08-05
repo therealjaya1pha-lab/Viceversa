@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#1E293B] text-white">
       {/* Main Footer Links & Info */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div className="layout-container section-spacing-md">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Col 1: Brand & Spanish Banner */}
           <div className="space-y-4">
@@ -29,16 +29,16 @@ export default function Footer() {
                 />
               </svg>
               <div>
-                <span className="text-2xl font-extrabold tracking-tight font-serif text-white block leading-none">
+                <span className="text-2xl font-extrabold tracking-tight font-serif-brand text-white block leading-none">
                   Vice Versa
                 </span>
-                <span className="text-[10px] uppercase font-semibold text-rose-300 tracking-wider">
+                <span className="text-fluid-caption uppercase font-semibold text-rose-300 tracking-wider">
                   Speech and Language Services
                 </span>
               </div>
             </div>
 
-            <p className="text-sm font-semibold text-rose-200/90 italic bg-white/5 p-2.5 rounded-lg border border-white/10 inline-block">
+            <p className="text-fluid-sm font-semibold text-rose-200/90 italic bg-white/5 p-2.5 rounded-lg border border-white/10 inline-block">
               ¡Hablamos español, llámanos hoy!
             </p>
 

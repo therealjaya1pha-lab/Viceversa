@@ -39,16 +39,16 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-20 bg-white border-t border-slate-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="section-spacing-md bg-white border-t border-slate-100">
+      <div className="layout-container">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-          <span className="badge-burgundy inline-block">
+          <span className="badge-burgundy inline-block text-fluid-sm font-semibold">
             {isEs ? 'Testimonios de Familias' : 'Family Testimonials'}
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1E293B]">
+          <h2 className="text-fluid-h2 font-extrabold text-[#1E293B]">
             {isEs ? 'Lo Que Dicen Nuestras Familias' : 'Trusted by North Texas Families'}
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-fluid-sub text-slate-600">
             {isEs
               ? 'Conozca las experiencias de padres que confían en el equipo de Vice Versa.'
               : 'Real stories from parents who experienced compassionate, personalized therapy.'}
@@ -70,17 +70,17 @@ export default function TestimonialsSection() {
                   ))}
                 </div>
 
-                <p className="text-sm text-slate-700 leading-relaxed italic">
+                <p className="text-fluid-body text-slate-700 italic">
                   &quot;{r.text}&quot;
                 </p>
               </div>
 
               <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
                 <div>
-                  <h4 className="font-bold text-[#1E293B] text-sm">{r.name}</h4>
-                  <p className="text-xs text-slate-500 font-medium">{r.location}</p>
+                  <h4 className="font-bold text-[#1E293B] text-fluid-sm">{r.name}</h4>
+                  <p className="text-fluid-sm text-slate-500 font-medium">{r.location}</p>
                 </div>
-                <span className="text-[10px] font-bold text-[#9C1D38] bg-[#FDF2F4] border border-[#F4C5CE] px-2.5 py-1 rounded-full">
+                <span className="text-fluid-sm font-bold text-[#9C1D38] bg-[#FDF2F4] border border-[#F4C5CE] px-2.5 py-1 rounded-full">
                   {r.tag}
                 </span>
               </div>

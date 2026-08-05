@@ -20,14 +20,14 @@ export default function EmpowerPage() {
       <main className="flex-1">
         {/* Banner */}
         <div className="bg-[#9C1D38] text-white py-14 px-4">
-          <div className="max-w-7xl mx-auto text-center space-y-3">
-            <span className="text-xs font-bold uppercase tracking-widest bg-white/15 px-3.5 py-1 rounded-full text-red-100">
+          <div className="layout-container text-center space-y-3">
+            <span className="text-fluid-caption font-bold uppercase tracking-widest bg-white/15 px-3.5 py-1 rounded-full text-red-100">
               {isEs ? 'Programas Educativos y de Vida' : 'Academic & Life Empowerment'}
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-serif">
+            <h1 className="text-fluid-h1 font-extrabold font-serif-brand">
               EmpowerEd & Empower U
             </h1>
-            <p className="text-sm sm:text-base text-red-100 max-w-2xl mx-auto">
+            <p className="text-fluid-sub text-red-100 max-w-2xl mx-auto">
               {isEs
                 ? 'Equipando a los estudiantes con las habilidades necesarias para el éxito académico y la independencia en la vida diaria.'
                 : 'Equipping learners with essential skills for academic success and everyday independence.'}
@@ -36,7 +36,7 @@ export default function EmpowerPage() {
         </div>
 
         {/* Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+        <div className="layout-container section-spacing-md space-y-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* EmpowerEd Card */}
             <div className="bg-white rounded-2xl p-8 border-2 border-red-100 shadow-md space-y-6 flex flex-col justify-between hover:shadow-xl transition-all">
