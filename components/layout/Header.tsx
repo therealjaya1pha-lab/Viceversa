@@ -144,13 +144,13 @@ export default function Header() {
         <div className="flex lg:hidden items-center space-x-2">
           <button
             onClick={() => openBookingWithService()}
-            className="sm:hidden bg-[#2B2B2B] text-white px-3 py-1.5 rounded text-xs font-bold uppercase"
+            className="sm:hidden bg-[#1E293B] hover:bg-[#0F172A] text-white px-3 py-1.5 rounded-lg text-xs font-bold uppercase transition-all active:scale-95"
           >
             {isEs ? 'CITA' : 'BOOK'}
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-md text-gray-700 hover:text-[#9C1D38] hover:bg-gray-100 focus:outline-none"
+            className="p-2 rounded-lg text-slate-700 hover:text-[#9C1D38] hover:bg-slate-100 focus:outline-none transition-colors"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -160,8 +160,8 @@ export default function Header() {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3 shadow-lg animate-in slide-in-from-top-2">
-          <nav className="flex flex-col space-y-2">
+        <div className="lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-xl animate-in slide-in-from-top-2">
+          <nav className="flex flex-col space-y-1">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -169,10 +169,10 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-3 py-2 rounded-md text-base font-semibold transition-colors ${
+                  className={`px-3.5 py-2.5 rounded-lg text-base font-semibold transition-all ${
                     isActive
-                      ? 'bg-[#9C1D38]/10 text-[#9C1D38] font-bold'
-                      : 'text-gray-700 hover:bg-gray-50'
+                      ? 'bg-[#FDF2F4] text-[#9C1D38] font-bold border-l-4 border-[#9C1D38]'
+                      : 'text-slate-700 hover:bg-slate-50 hover:text-slate-900'
                   }`}
                 >
                   {link.name}
@@ -181,20 +181,20 @@ export default function Header() {
             })}
           </nav>
 
-          <div className="pt-3 border-t border-gray-100 flex flex-col gap-2">
+          <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 openBookingWithService();
               }}
-              className="w-full bg-[#2B2B2B] text-white py-2.5 rounded-md font-bold text-center text-xs uppercase tracking-wider"
+              className="w-full bg-[#1E293B] hover:bg-[#0F172A] text-white py-2.5 rounded-lg font-bold text-center text-xs uppercase tracking-wider transition-all active:scale-95 shadow-xs"
             >
               {isEs ? 'AGENDAR CITA' : 'CONTACT / BOOK APPOINTMENT'}
             </button>
             <Link
               href="/nannies"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full bg-[#C8C5F4] text-[#2B2B2B] py-2.5 rounded-md font-bold text-center text-xs uppercase tracking-wider block"
+              className="w-full bg-[#C8C5F4] hover:bg-[#B5B1EF] text-[#4C468E] py-2.5 rounded-lg font-bold text-center text-xs uppercase tracking-wider block border border-[#B5B1EF] transition-all active:scale-95 shadow-xs"
             >
               LOLN (LANGUAGE OF LEARNING NANNIES)
             </Link>
@@ -203,9 +203,9 @@ export default function Header() {
                 setMobileMenuOpen(false);
                 setIsScreenerOpen(true);
               }}
-              className="w-full bg-amber-50 text-amber-800 border border-amber-200 py-2.5 rounded-md font-medium text-center text-xs flex items-center justify-center space-x-1"
+              className="w-full bg-amber-50/90 text-amber-900 border border-amber-200/80 py-2.5 rounded-lg font-semibold text-center text-xs flex items-center justify-center space-x-1.5 transition-all hover:bg-amber-100/80"
             >
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+              <Sparkles className="w-3.5 h-3.5 text-amber-600 animate-pulse" />
               <span>{isEs ? 'Evaluación de Síntomas' : 'Child Therapy Screener'}</span>
             </button>
           </div>
